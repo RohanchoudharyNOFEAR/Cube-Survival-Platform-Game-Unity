@@ -7,6 +7,10 @@ public class Health : MonoBehaviour
     private int _maxHealth = 3;
     [SerializeField]
     private int health;
+    public delegate void HealthUpdateAction();
+    public static HealthUpdateAction OnHealthIncreaseEvent;
+    public static HealthUpdateAction OnHealthDecreaseEvent;
+
     public int _Health
     {
         get { return health; }
@@ -38,6 +42,10 @@ public class Health : MonoBehaviour
         if(IsplayerDead() ==false&& health<_maxHealth)
         {
             health++;
+            if (OnHealthIncreaseEvent != null)
+            {
+                OnHealthIncreaseEvent();
+            }
         }
 
     }
@@ -47,6 +55,11 @@ public class Health : MonoBehaviour
         if (IsplayerDead() == false)
         {
             health--;
+            if(OnHealthDecreaseEvent!=null)
+            {
+                OnHealthDecreaseEvent();
+            }
+            
         }
 
     }

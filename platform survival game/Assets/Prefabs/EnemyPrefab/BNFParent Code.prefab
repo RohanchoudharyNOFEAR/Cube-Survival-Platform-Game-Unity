@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  _playerTransform: {fileID: 0}
 --- !u!1 &7988571682703851679
 GameObject:
   m_ObjectHideFlags: 0

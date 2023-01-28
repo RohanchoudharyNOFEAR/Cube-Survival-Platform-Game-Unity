@@ -15,17 +15,30 @@ public class UIManager : MonoBehaviour
     private TMP_Text _counterText;
     [SerializeField]
     private GameManager _gameManager=null;
-    private Health Health;
+   
+    private int _playerHealthUI = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-        Health = GameObject.FindObjectOfType<Health>().GetComponent<Health>();
+      
         _gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>() ?? null ;
         CountDown = _gameManager.Timer;
         _counterText = GameObject.Find("Timer Text").GetComponent<TMP_Text>();
 
       //  StartCoroutine(StartCountDown());
+    }
+
+    private void OnEnable()
+    {
+        Health.OnHealthDecreaseEvent += _decreasePlayerHealthUI;
+        Health.OnHealthIncreaseEvent += _increasePlayerHealthUI;
+    }
+
+    private void OnDisable()
+    {
+        Health.OnHealthDecreaseEvent -= _decreasePlayerHealthUI;
+        Health.OnHealthIncreaseEvent -= _increasePlayerHealthUI;
     }
 
     // Update is called once per frame
@@ -37,10 +50,10 @@ public class UIManager : MonoBehaviour
 
     void DisplayLives()
     {
-        if (Health != null)
-        {
-            _livesImageDisplay.sprite = _lives[Health._Health];
-        }
+        
+            _livesImageDisplay.sprite = _lives[_playerHealthUI];
+       
+        
             
     }
 
@@ -54,19 +67,16 @@ public class UIManager : MonoBehaviour
         
     }
 
-
-    /*
-    IEnumerator StartCountDown()
+    private void _increasePlayerHealthUI()
     {
-        yield return new WaitForSeconds(1f);
-        CountDown--;
-        if(CountDown==0)
-        {
-            _gameManager.RestartLevel();
-        }
-        _counterText.text = "TimeLeft :" + CountDown;
-        StartCoroutine(StartCountDown());
+        _playerHealthUI++;
     }
-    */
+    private void _decreasePlayerHealthUI()
+    {
+        _playerHealthUI--;
+    }
+
+
+  
 
 }
