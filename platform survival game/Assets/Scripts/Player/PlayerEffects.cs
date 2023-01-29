@@ -5,6 +5,11 @@ using UnityEngine;
 public  class PlayerEffects : MonoBehaviour
 {
     public static PlayerEffects Instance;
+    [SerializeField]
+    private Rigidbody _playerRB;
+    private Vector3 _bouncebackDirection;
+    [SerializeField]
+    private float _knockBackStrength = 500f;
 
     private void Awake()
     {
@@ -27,7 +32,7 @@ public  class PlayerEffects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _playerRB = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -46,6 +51,13 @@ public  class PlayerEffects : MonoBehaviour
         GetComponent<Renderer>().material.color = Color.white;
     }
 
+    public void BounceBackEffect(Collision other)
+    {
+        _bouncebackDirection = transform.position - other.transform.position;
+        _playerRB.AddForce(_bouncebackDirection.normalized*_knockBackStrength,ForceMode.Impulse);
+        
+
+    }
 
 
 }

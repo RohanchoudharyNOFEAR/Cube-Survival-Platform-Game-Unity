@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641c7d8a45f5ffc47881b576bf7ed4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollidedEnemeyTransform: {fileID: 0}
 --- !u!114 &2102019610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,3 +295,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d842f4e6ea02d1a4ca23ce192c0c0d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerRB: {fileID: 0}
+  _knockBackStrength: 9

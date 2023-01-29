@@ -128,6 +128,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemeyDataSO\EnemyDataSO.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enimies Types\TEST ONLY Patterened enemy\JumpingAndMoving.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enimies Types\TEST ONLY Patterened enemy\CirclcularPatternCreater.cs" />
+    <Compile Include="Assets\Scripts\Enemy\NewEnemySpawnerFB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
@@ -137,7 +138,6 @@
     <Compile Include="Assets\Unity UI Samples\Scripts\ChangeColor.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enimies Types\EnemyParentForwardMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Scripts\Enemy\NewEnemySpawnerFB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

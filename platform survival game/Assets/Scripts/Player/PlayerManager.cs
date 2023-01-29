@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     {
         PlayerCharacter.OnCollidedEnemyEvent += DealDamage;
         PlayerCharacter.OnColliderExitEvent += StopHurtEffect;
+        
     }
     private void OnDisable()
     {
@@ -32,16 +33,17 @@ public class PlayerManager : MonoBehaviour
     }
 
 
-    private void DealDamage()
+    private void DealDamage(Collision other)
     {
         //play hurt Effect
         PlayerEffects.Instance.HurtEffect();
         //health--
         _playerHealth.DecreaseHealth();
         //bounce off effect
+        PlayerEffects.Instance.BounceBackEffect(other);
     }
 
-    private void StopHurtEffect()
+    private void StopHurtEffect(Collision other)
     {
         PlayerEffects.Instance.CancleHurtEffect();
     }

@@ -40,7 +40,7 @@ public class TargetedEnemyController : MonoBehaviour
     }
     private void DestroyGameobject()
     {
-        Destroy(this.gameObject, 4f);
+        Destroy(this.gameObject, 5.5f);
     }
 
 
