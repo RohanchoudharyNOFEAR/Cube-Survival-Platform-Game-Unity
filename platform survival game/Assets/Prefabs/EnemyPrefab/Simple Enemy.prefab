@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6167773608733970881}
   - component: {fileID: 6167773608733970880}
   - component: {fileID: 6167773608733970908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RandomEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6167773608733970885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b2fc7a17e63ca0143b3cca1bf635afab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6167773608968868157}
   - component: {fileID: 1389816835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Simple Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -178,3 +178,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   _playerTransform: {fileID: 6534832905338649272, guid: c9f04dcc76faa544f9c87a96a11143ed, type: 3}
+  MovementDir: {x: 0, y: 0, z: 0}

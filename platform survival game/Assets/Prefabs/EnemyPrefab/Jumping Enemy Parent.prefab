@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287746633674996938}
   - component: {fileID: 756281060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jumping Enemy Parent
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   _playerTransform: {fileID: 6534832905338649272, guid: c9f04dcc76faa544f9c87a96a11143ed, type: 3}
+  MovementDir: {x: 0, y: 0, z: 0}
 --- !u!1 &7287746634442089509
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ GameObject:
   - component: {fileID: 7287746634442089514}
   - component: {fileID: 7287746634442089515}
   - component: {fileID: 328713489102697488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jumping Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -111,7 +112,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9b46afa69d508d747bb76e5f34513221, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7988571681985922897}
   - component: {fileID: 1840939067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BNFParent Code
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   _playerTransform: {fileID: 0}
+  MovementDir: {x: 0, y: 0, z: 0}
 --- !u!1 &7988571682703851679
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ GameObject:
   - component: {fileID: 7988571682703851674}
   - component: {fileID: 7988571682703851673}
   - component: {fileID: 7988571682703851684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: E1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -111,7 +112,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fbb5b2dce23560a41805da51a9c14530, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -174,7 +175,7 @@ GameObject:
   - component: {fileID: 7988571683054648874}
   - component: {fileID: 7988571683054648873}
   - component: {fileID: 7988571683054648884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: E2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -224,7 +225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f8c7b908e8ddc53418d9c4cd214e74b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

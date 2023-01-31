@@ -9,12 +9,17 @@ public class TargetedEnemyController : MonoBehaviour
 
     [SerializeField]
     private int damage;
-
+    [SerializeField]
+    private float ExplosionRadius = 10f;
+    [SerializeField]
+    private float ExplosionStrength = 5f;
+    [SerializeField]
+    private ParticleSystem ExplosionParticle;
 
     // [SerializeField]
     // private EnemyDataSO data;
-    [SerializeField]
-    private TargetedEnemyDataSO data;
+  //  [SerializeField]
+  //  private TargetedEnemyDataSO data;
 
 
     public GameObject Player;
@@ -25,13 +30,14 @@ public class TargetedEnemyController : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        Invoke("DestroyGameobject",6f);
     }
 
     // Update is called once per frame
     void Update()
     {
         Followplayer();
-        DestroyGameobject();
+     //   DestroyGameobject();
     }
 
     void Followplayer()
@@ -40,10 +46,28 @@ public class TargetedEnemyController : MonoBehaviour
     }
     private void DestroyGameobject()
     {
-        Destroy(this.gameObject, 5.5f);
+        PlayExplosionParticle();
+        ExplosionEffect();
+        Destroy(this.gameObject);
+      
     }
 
+    private void ExplosionEffect()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, ExplosionRadius);
+        foreach(Collider item in colliders)
+        {
+            Rigidbody rb = item.GetComponent<Rigidbody>();
+            if(rb!=null)
+            {
+                rb.AddExplosionForce(ExplosionStrength, transform.position, ExplosionRadius,0,ForceMode.Impulse);
+            }
+        }
+    }
 
-
+    private void PlayExplosionParticle()
+    {
+        ExplosionParticle.Play();
+    }
 
 }

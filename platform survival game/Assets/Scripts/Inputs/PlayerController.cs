@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
    // private Camera  mainCamera;
    // private Vector2 CameraForward ;
     public Transform mainCamera;
-
+    [HideInInspector]
+    public Vector3 CameraRelativeMovement;
     public float RotationSpeed = 100f;
 
     //  private Vector2 Cameraright ;
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         InputAxis = direction;
       //  Debug.Log(InputAxis.x);
-        //Debug.Log(InputAxis.y);
+       
         Vector3 Cameraright = mainCamera.transform.right;
         Vector3 CameraForward = mainCamera.transform.forward;
         CameraForward = CameraForward.normalized;
@@ -49,15 +50,16 @@ public class PlayerController : MonoBehaviour
         Vector3 ForwardrelativedirectionInput = CameraForward * InputAxis.y;
         Vector3 RightrelativedirectionInput = Cameraright * InputAxis.x;
 
-        Vector3 CameraRelativeMovement = ForwardrelativedirectionInput + RightrelativedirectionInput;
+         CameraRelativeMovement = ForwardrelativedirectionInput + RightrelativedirectionInput;
 
 
 
 
           transform.Translate(CameraRelativeMovement*MovementSpeed*Time.deltaTime, Space.World);
 
+      
 
-        //  RotateTowardMovement(ForwardrelativedirectionInput);
+      
         RotateTowardMovement(CameraRelativeMovement);
     }
 

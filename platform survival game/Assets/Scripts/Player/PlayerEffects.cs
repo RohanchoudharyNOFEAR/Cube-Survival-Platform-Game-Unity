@@ -10,6 +10,11 @@ public  class PlayerEffects : MonoBehaviour
     private Vector3 _bouncebackDirection;
     [SerializeField]
     private float _knockBackStrength = 500f;
+    [SerializeField]
+    private ParticleSystem MoveParticle;
+    private PlayerController _playerController;
+    [SerializeField]
+    private GameObject particleParent;
 
     private void Awake()
     {
@@ -33,12 +38,14 @@ public  class PlayerEffects : MonoBehaviour
     void Start()
     {
         _playerRB = GetComponent<Rigidbody>();
+        _playerController = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+      
+        playTrailEffect();
     }
 
     public void HurtEffect()
@@ -56,7 +63,17 @@ public  class PlayerEffects : MonoBehaviour
         _bouncebackDirection = transform.position - other.transform.position;
         _playerRB.AddForce(_bouncebackDirection.normalized*_knockBackStrength,ForceMode.Impulse);
         
+    }
 
+    public void playTrailEffect()
+    {
+       // particleParent.transform.position = -transform.position;
+        ParticleSystem.ShapeModule shape = MoveParticle.shape;
+        //   shape.position = this.transform.InverseTransformDirection(transform.position);
+       // shape.position = -_playerController.CameraRelativeMovement;
+
+          print(_playerController.CameraRelativeMovement.magnitude);
+        MoveParticle.Play();
     }
 
 
