@@ -23,7 +23,7 @@ public class TargetedEnemyController : MonoBehaviour
 
 
     public GameObject Player;
-
+    public GameObject parent;
    
 
     // Start is called before the first frame update
@@ -47,8 +47,9 @@ public class TargetedEnemyController : MonoBehaviour
     private void DestroyGameobject()
     {
         PlayExplosionParticle();
+        AudioManager.Instance.TargetedEnemeyExplosionAudio();
         ExplosionEffect();
-        Destroy(this.gameObject);
+        Destroy(parent,0.1f);
       
     }
 

@@ -37,6 +37,7 @@ public class PlayerManager : MonoBehaviour
     {
         //play hurt Effect
         PlayerEffects.Instance.HurtEffect();
+        AudioManager.Instance.playHurtAudio();
         //health--
         _playerHealth.DecreaseHealth();
         //bounce off effect
