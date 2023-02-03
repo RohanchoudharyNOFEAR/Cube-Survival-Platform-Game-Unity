@@ -131,7 +131,7 @@ MonoBehaviour:
   speed: 5
   damage: 1
   ExplosionRadius: 10
-  ExplosionStrength: 15
+  ExplosionStrength: 17
   ExplosionParticle: {fileID: 2595083085918526134}
   Player: {fileID: 0}
   parent: {fileID: 6286269687116817373}

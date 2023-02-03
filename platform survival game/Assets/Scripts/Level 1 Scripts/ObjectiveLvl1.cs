@@ -22,7 +22,7 @@ public class ObjectiveLvl1 : MonoBehaviour
      void Objective()
     {
         TimeLeft -= Time.deltaTime;
-        if(TimeLeft<0&& _gameManager.IsObjectiveCompleted==false)
+        if(TimeLeft<0 && _gameManager.IsObjectiveCompleted==false)
         {
             _gameManager.IsObjectiveCompleted = true;
         }

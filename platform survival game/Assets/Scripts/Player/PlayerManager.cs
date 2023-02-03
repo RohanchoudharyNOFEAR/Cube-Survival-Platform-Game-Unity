@@ -12,13 +12,15 @@ public class PlayerManager : MonoBehaviour
     private void OnEnable()
     {
         PlayerCharacter.OnCollidedEnemyEvent += DealDamage;
-        PlayerCharacter.OnColliderExitEvent += StopHurtEffect;
+        PlayerCharacter.OnEnemeyColliderExitEvent += StopHurtEffect;
+        PlayerCharacter.OnCollidedCollectableEvent += IncreaseCollectPoints;
         
     }
     private void OnDisable()
     {
         PlayerCharacter.OnCollidedEnemyEvent -= DealDamage;
-        PlayerCharacter.OnColliderExitEvent -= StopHurtEffect;
+        PlayerCharacter.OnEnemeyColliderExitEvent -= StopHurtEffect;
+        PlayerCharacter.OnCollidedCollectableEvent -= IncreaseCollectPoints;
     }
 
     void Start()
@@ -57,6 +59,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-
+    private void IncreaseCollectPoints()
+    {
+        GameManager.GMInstance.CollectedItems++;
+    }
 
 }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 5085d9ef58245154fa551bcd449e1167
+  - enabled: 1
     path: Assets/Scenes/FarCry3VaasScene.unity
     guid: b6f6a046f3ee0134186277ed6ec78741
   m_configObjects: {}

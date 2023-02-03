@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewEnemySpawnerDown : MonoBehaviour
+public class NewEnemySpawnerLR : MonoBehaviour
 {
     public GameObject[] EnemiesPrefabs;
     [SerializeField]
@@ -42,23 +42,23 @@ public class NewEnemySpawnerDown : MonoBehaviour
             setEnemyParentToPlatform(enemy);
            
         }
-        else if (RandomEnemySelction <= 6 && RandomEnemySelction >= 4)//targeted
+        else if (RandomEnemySelction <= 6 && RandomEnemySelction >= 4)//jumping
         {
            
             GameObject enemy = Instantiate(EnemiesPrefabs[1], spawnPosition, Quaternion.Euler(0, Random.Range(-80, 80), 0));
-
+            setMovementDir(enemy);
             setEnemyParentToPlatform(enemy);
         
         }
-        else if (RandomEnemySelction <= 8 && RandomEnemySelction >= 7)//bnf
+        else if (RandomEnemySelction <= 8 && RandomEnemySelction >= 7)//targeted
         {
             
             GameObject enemy = Instantiate(EnemiesPrefabs[2], spawnPosition, Quaternion.Euler(0, Random.Range(-90, 90), 0));
-            setMovementDir(enemy);
+           // setMovementDir(enemy);
             setEnemyParentToPlatform(enemy);
            
         }
-        else//jumping
+        else//BNF
         {
            
             GameObject enemy = Instantiate(EnemiesPrefabs[3], spawnPosition, Quaternion.Euler(0, Random.Range(-80, 80), 0));

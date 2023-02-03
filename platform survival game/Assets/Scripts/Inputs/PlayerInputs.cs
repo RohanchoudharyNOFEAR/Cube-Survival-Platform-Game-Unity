@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputs : MonoBehaviour
 {
    public  Vector2 MoveDirection;
+    public Joystick Joystick;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +17,17 @@ public class PlayerInputs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GetInput();
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        MoveDirection = context.ReadValue<Vector2>();
+       // MoveDirection = context.ReadValue<Vector2>();
+       
     }
-
+    
+    public void GetInput()
+    {
+        MoveDirection = new Vector2(Joystick.Horizontal, Joystick.Vertical);
+    }
 }

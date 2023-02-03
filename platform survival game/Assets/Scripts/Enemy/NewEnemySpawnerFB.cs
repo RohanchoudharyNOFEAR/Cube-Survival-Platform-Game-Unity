@@ -42,23 +42,23 @@ public class NewEnemySpawnerFB : MonoBehaviour
             setEnemyParentToPlatform(enemy);
            
         }
-        else if (RandomEnemySelction <= 6 && RandomEnemySelction >= 4)//targeted
+        else if (RandomEnemySelction <= 6 && RandomEnemySelction >= 4)//Jumping
         {
            
             GameObject enemy = Instantiate(EnemiesPrefabs[1], spawnPosition, Quaternion.Euler(0, Random.Range(-80, 80), 0));
-
+            setMovementDir(enemy);
             setEnemyParentToPlatform(enemy);
         
         }
-        else if (RandomEnemySelction <= 8 && RandomEnemySelction >= 7)//bnf
+        else if (RandomEnemySelction <= 8 && RandomEnemySelction >= 7)//Targeted
         {
             
             GameObject enemy = Instantiate(EnemiesPrefabs[2], spawnPosition, Quaternion.Euler(0, Random.Range(-90, 90), 0));
-            setMovementDir(enemy);
+           // setMovementDir(enemy);
             setEnemyParentToPlatform(enemy);
            
         }
-        else//jumping
+        else//BNF
         {
            
             GameObject enemy = Instantiate(EnemiesPrefabs[3], spawnPosition, Quaternion.Euler(0, Random.Range(-80, 80), 0));

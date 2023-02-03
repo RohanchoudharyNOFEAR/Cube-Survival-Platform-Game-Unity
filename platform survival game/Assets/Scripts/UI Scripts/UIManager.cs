@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     private TMP_Text _counterText;
     [SerializeField]
     private GameManager _gameManager=null;
+    [SerializeField]
+    private TMP_Text _CollectedItemsText;
    
     private int _playerHealthUI = 3;
 
@@ -25,7 +27,7 @@ public class UIManager : MonoBehaviour
         _gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>() ?? null ;
         CountDown = _gameManager.Timer;
         _counterText = GameObject.Find("Timer Text").GetComponent<TMP_Text>();
-
+        _CollectedItemsText = GameObject.Find("Collected Items Text").GetComponent<TMP_Text>()??null;
       //  StartCoroutine(StartCountDown());
     }
 
@@ -46,15 +48,12 @@ public class UIManager : MonoBehaviour
     {
         DisplayLives();
         DisplayTimer();
+        DisplayCollectedItems();
     }
 
     void DisplayLives()
-    {
-        
-            _livesImageDisplay.sprite = _lives[_playerHealthUI];
-       
-        
-            
+    {        
+            _livesImageDisplay.sprite = _lives[_playerHealthUI];                        
     }
 
 
@@ -76,7 +75,13 @@ public class UIManager : MonoBehaviour
         _playerHealthUI--;
     }
 
-
+    void DisplayCollectedItems()
+    {
+        if(_CollectedItemsText!=null)
+        {
+            _CollectedItemsText.text = "Items:" + _gameManager.CollectedItems + "/" + _gameManager.NoItemToCollecte;
+        }   
+    }
   
 
 }

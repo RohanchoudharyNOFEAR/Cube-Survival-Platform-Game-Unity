@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnDisable()
     {
-        Instance = null;
+      //  Instance = null;
     }
 
 

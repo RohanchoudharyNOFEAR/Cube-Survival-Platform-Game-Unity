@@ -176,6 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0e26df873d58046ac962bb6c35674e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   _playerTransform: {fileID: 6534832905338649272, guid: c9f04dcc76faa544f9c87a96a11143ed, type: 3}
   MovementDir: {x: 0, y: 0, z: 0}
