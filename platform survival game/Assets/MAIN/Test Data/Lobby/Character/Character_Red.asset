@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4ba9f1282bc9a4b94d9fac4f48d4f3, type: 3}
+  m_Name: Character_Red
+  m_EditorClassIdentifier: 
+  id: 2
+  displayName: RED
+  icon: {fileID: 21300092, guid: 09e4c6a7d75923945afe43953ef58ad2, type: 3}
+  introPrefab: {fileID: 9020703992247870075, guid: 3fcc20656be0d4f46a3146d202628eb9, type: 3}
+  gameplayPrefab: {fileID: 8267622939503973619, guid: e7f81977d5faf264a8091c5fece7727e, type: 3}

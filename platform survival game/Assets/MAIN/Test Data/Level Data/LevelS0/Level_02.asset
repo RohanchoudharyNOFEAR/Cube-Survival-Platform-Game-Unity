@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1410f16c4d226d47a566cd7035089d7, type: 3}
+  m_Name: Level_02
+  m_EditorClassIdentifier: 
+  LevelDefficulty: 0
+  SceneName: Test Scene 01_Level_02
+  LevelRuntimeTotal: 60
+  ToSpawnCollectables: 1
+  ToSpawnAbilities: 1
+  DownEnemeySpawnerData:
+    SpawnerPrefab: {fileID: 6574569737645558551, guid: 5a1c0e88a91ccbf4d80c2c78dd07f8e4, type: 3}
+    EnemeySpawner: {fileID: 6574569737645558537, guid: 5a1c0e88a91ccbf4d80c2c78dd07f8e4, type: 3}
+    Interval: 4
+    enemies: []
+    DownwardEnemies:
+    - {fileID: 6167773608968868156, guid: f6b329b3cc8ec8e4f887ca4bbf46d7cd, type: 3}
+  ForwardEnemeySpawnerData:
+    SpawnerPrefab: {fileID: 2339374492180254737, guid: 2427e97f8602d414684c4963a87bd7e7, type: 3}
+    EnemeySpawner: {fileID: 2339374492180254743, guid: 2427e97f8602d414684c4963a87bd7e7, type: 3}
+    Interval: 4
+    enemies:
+    - {fileID: 6167773608968868156, guid: f6b329b3cc8ec8e4f887ca4bbf46d7cd, type: 3}
+    - {fileID: 7287746633674996939, guid: 698a8a041af02bc4bac796b4b0d91e0c, type: 3}
+    - {fileID: 0}
+    - {fileID: 7988571681985922896, guid: cf3373e97fd3d8f408d33d6d5cfc4782, type: 3}
+    DownwardEnemies: []
+  BackwardEnemeySpawnerData:
+    SpawnerPrefab: {fileID: 8734810680243676592, guid: ccec2ac41f1489a4da0127cd71b7d4c5, type: 3}
+    EnemeySpawner: {fileID: 8734810680243676594, guid: ccec2ac41f1489a4da0127cd71b7d4c5, type: 3}
+    Interval: 4
+    enemies:
+    - {fileID: 6167773608968868156, guid: f6b329b3cc8ec8e4f887ca4bbf46d7cd, type: 3}
+    - {fileID: 7287746633674996939, guid: 698a8a041af02bc4bac796b4b0d91e0c, type: 3}
+    - {fileID: 0}
+    - {fileID: 7988571681985922896, guid: cf3373e97fd3d8f408d33d6d5cfc4782, type: 3}
+    DownwardEnemies: []
+  LeftEnemeySpawnerData:
+    SpawnerPrefab: {fileID: 7777072864941400970, guid: 8971209d1fb911d4a8e61fa35ccc3d79, type: 3}
+    EnemeySpawner: {fileID: 7777072864941400968, guid: 8971209d1fb911d4a8e61fa35ccc3d79, type: 3}
+    Interval: 4
+    enemies:
+    - {fileID: 6167773608968868156, guid: f6b329b3cc8ec8e4f887ca4bbf46d7cd, type: 3}
+    - {fileID: 7287746633674996939, guid: 698a8a041af02bc4bac796b4b0d91e0c, type: 3}
+    - {fileID: 6286269687116817373, guid: 69fef09a2eef56f45bbdda2bc28251d2, type: 3}
+    - {fileID: 7988571681985922896, guid: cf3373e97fd3d8f408d33d6d5cfc4782, type: 3}
+    DownwardEnemies: []
+  RightEnemeySpawnerData:
+    SpawnerPrefab: {fileID: 8128959427720405901, guid: 52e438e30c57a2d49b6435f0f69c0d81, type: 3}
+    EnemeySpawner: {fileID: 8128959427720405903, guid: 52e438e30c57a2d49b6435f0f69c0d81, type: 3}
+    Interval: 4
+    enemies:
+    - {fileID: 6167773608968868156, guid: f6b329b3cc8ec8e4f887ca4bbf46d7cd, type: 3}
+    - {fileID: 7287746633674996939, guid: 698a8a041af02bc4bac796b4b0d91e0c, type: 3}
+    - {fileID: 6286269687116817373, guid: 69fef09a2eef56f45bbdda2bc28251d2, type: 3}
+    - {fileID: 7988571681985922896, guid: cf3373e97fd3d8f408d33d6d5cfc4782, type: 3}
+    DownwardEnemies: []
+  collectableSpawnerData:
+    SpawnerPrefab: {fileID: 3452787127740346531, guid: 2747595eea5447f4e8243613c601791b, type: 3}
+    Interval: 6
+    spawnableItems:
+    - {fileID: 5791679630470090457, guid: 958493a66049a5841a12c12a08735e46, type: 3}
+  abilitySpawnerData:
+    SpawnerPrefab: {fileID: 1296017156068924598, guid: f8a791a283af33440971cfcefce2b855, type: 3}
+    Interval: 6
+    spawnableItems:
+    - {fileID: 2980153360944107629, guid: ca9bc05f710042543925072b265743e5, type: 3}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4ba9f1282bc9a4b94d9fac4f48d4f3, type: 3}
+  m_Name: Character_Green
+  m_EditorClassIdentifier: 
+  id: 3
+  displayName: GREEN
+  icon: {fileID: 21300070, guid: 09e4c6a7d75923945afe43953ef58ad2, type: 3}
+  introPrefab: {fileID: 5802352678905396412, guid: 4e77362e5244414459caa8311a9f1154, type: 3}
+  gameplayPrefab: {fileID: 1367468344229223636, guid: 456a145c7668c2b46a7ed9a8c8f05ae0, type: 3}
